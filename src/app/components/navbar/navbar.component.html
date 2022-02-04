@@ -1,0 +1,19 @@
+<div class="header">
+  <div class="nav display-grid">
+    <div class="nav-left">
+      <div class="brand-and-search">
+        <a to="/" class="brand-name">
+          <span class="brand-portion-1">ISBIT</span>
+          <span class="brand-portion-2">TodoList</span>
+        </a>
+      </div>
+    </div>
+    <div class="display-flex flex-right center-vertical">
+      <app-button
+        [text]="isProjectFormActive ? 'Close form' : 'Create project'"
+        [class]="isProjectFormActive ? 'danger-btn cursor-pointer' : 'primary-btn cursor-pointer'"
+        (btnClick)="toggleProjectForm()"
+      ></app-button>
+    </div>
+  </div>
+</div>

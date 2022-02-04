@@ -1,0 +1,11 @@
+<div
+    (click)="toggleCompleted(todo)"
+    class="individual-todo margin-y-1 padding-1 cursor-pointer"
+    [ngClass]="todo.completed ? 'completed' : ''">
+    <h4 class="padding-x-1">{{ todo.title }}</h4>
+    <p
+        [ngClass]="isDateNear(todo.dueDate) ? 'almost-due' : ''"
+        class="padding-x-1">
+        {{todo.completed ? "Completed on" : "Due on"}}: {{ transformDate(todo.dueDate) }}
+    </p>
+</div>

@@ -1,0 +1,26 @@
+<div class="display-grid project-row">
+    <div class="display-grid grid-center-vertical">
+        <h4>{{project.name}}</h4>
+        <p>Has {{ !!project.Todos ? project.Todos?.length : 0 }} todo(s)</p>
+    </div>
+    <div class="display-grid navigation">
+        <app-button
+            class="display-grid centered-content"
+            [class]="'cursor-pointer'"
+            [icon]="faFolderOpen"
+            (btnClick)="onOpenProjectDetails(project)">
+        </app-button>
+        <app-button
+            class="display-grid centered-content"
+            [class]="'cursor-pointer '"
+            [icon]="faEdit"
+            (btnClick)="onUpdate(project)">
+        </app-button>
+        <app-button
+            class="display-grid centered-content"
+            [class]="'cursor-pointer'"
+            [icon]="faTrashAlt"
+            (btnClick)="onDelete(project)">
+        </app-button>
+    </div>
+</div>

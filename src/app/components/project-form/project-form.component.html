@@ -1,0 +1,17 @@
+<div *ngIf="isProjectFormActive" class='display-grid create-project-row'>
+  <form>
+    <input
+      [(ngModel)]="name"
+      type="text"
+      name="name"
+      placeholder="project name"
+    />
+    <app-button
+      class="create-project-btn"
+      [class]="'cursor-pointer'"
+      [icon]="faPlus"
+      (btnClick)="addProject()"
+      [type]="'submit'"
+    ></app-button>
+  </form>
+</div>

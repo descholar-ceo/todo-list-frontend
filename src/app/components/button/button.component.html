@@ -1,0 +1,8 @@
+<button
+  [class]="class"
+  (click)="onClick()"
+  [type]="type"
+>
+  {{ !!text ? text : '' }}
+  <fa-icon *ngIf="!!icon" [icon]="icon"></fa-icon>
+</button>

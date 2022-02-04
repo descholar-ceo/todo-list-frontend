@@ -1,0 +1,16 @@
+.individual-todo {
+    border-radius: 0.5rem;
+    border: 1px solid #274472;
+}
+
+.completed {
+    background-color: #274472;
+    color: #ffffff;
+}
+
+.almost-due {
+    background-color: rgb(180, 88, 2);
+    border-radius: 1rem;
+    color: #ffffff;
+    width: 50%;
+}

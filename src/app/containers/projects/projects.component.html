@@ -1,0 +1,13 @@
+<div class="list-container">
+    <app-project-form
+        (sendUpdateProject)="saveUpdateProject($event)"
+        (sendNewProject)="saveNewProject($event)"
+    ></app-project-form>
+    <app-project
+        *ngFor="let project of projects"
+        [project]="project"
+        (onDeleteProject)="deleteProject(project)"
+        (onUpdateProject)="updateProject($event)"
+        (onOpenProject)="openProject($event)"
+    ></app-project>
+</div>

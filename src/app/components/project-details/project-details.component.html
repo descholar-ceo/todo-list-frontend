@@ -1,0 +1,20 @@
+<div *ngIf="isProjectDetailActive" class="project-modal">
+    <div class="project-modal__header">
+        <p
+            (click)="closeProject()"
+            class="project-modal__header__close_btn cursor-pointer display-grid centered-content">
+            <fa-icon [icon]="faTimes"></fa-icon>
+        </p>
+    </div>
+    <div class="project-modal__project-title">
+        <h1>{{ project.name }}</h1>
+    </div>
+    <div class="project-modal__todos-container">
+        <app-todo
+            *ngFor="let todo of project.Todos"
+            [todo]="todo"
+            (toggleCompletedEvent)="toggleCompletedTodo(todo)"
+            >
+        </app-todo>
+    </div>
+</div>
